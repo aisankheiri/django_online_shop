@@ -1,15 +1,36 @@
 {% extends '_base.html' %}
-
+{% load static %}
 
 {% block page_title %}
     logout
 {% endblock %}
 
+
 {% block content %}
-    <h1>Log out</h1>
-    <h2>Are you sure to log out?</h2>
-    <form action="" method="post">
-        {% csrf_token %}
-        <input type="submit" value="Are you sure?">
-    </form>
+    <div style="border: 2px solid black; padding: 10px;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 mt-5">
+                    <h1 class="text-center mb-4 mt-4 pt-5 mb--30" style="color: #491217">خروج کاربر</h1>
+                    <h2 class="text-center mb-4 mb--50">آیا از خروج خود مطمئن هستید؟</h2>
+                    <form action="" method="post">
+                        {% csrf_token %}
+
+                        <input type="submit" value="Log Out" class="btn btn-primary btn-block mt-4">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
 {% endblock %}
+
+
+
+
+
+
+
+
+
+
